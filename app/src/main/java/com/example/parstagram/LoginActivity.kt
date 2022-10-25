@@ -1,5 +1,6 @@
 package com.example.parstagram
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -10,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.parse.ParseUser
 
 class LoginActivity : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -38,6 +40,8 @@ class LoginActivity : AppCompatActivity() {
 
 
     }
+
+
 
     private fun signUpUser(username: String, password: String){
         // Create the ParseUser
@@ -80,6 +84,8 @@ class LoginActivity : AppCompatActivity() {
         finish()
 
     }
+
+
 
     companion object{
        const val TAG = "LoginActivity"
